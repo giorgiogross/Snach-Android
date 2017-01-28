@@ -18,4 +18,4 @@ Navigation is realized like this: Imagine a double linked list with the watch fa
 See my Snach-Arduino Repo for details about the smartwatch and to find its code.
 
 # Licenses
-Code and creative contents created by me are signed as such and licensed under the Apache-2.0. See LICENSE.txt for details. Code not created by me is signed as such and includes a copyright notice on the top.
+Code and creative contents created by me are signed as such and licensed under the Apache-2.0. See LICENSE.txt for details. Code not created by me is signed as such and includes a copyright notice on the top. See the licenses file for libraries licenses.
