@@ -1,0 +1,147 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="assembtec.com.snach">
+
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <permission android:description="@string/apps_title"
+        android:icon="@drawable/ic_launcher"
+        android:label="Snach Permission"
+        android:name="assembtec.com.snach.SNACH_SYSTEM_ACCESS"
+        android:permissionGroup="string"
+        android:protectionLevel= "dangerous" />
+    <uses-permission android:name="assembtec.com.snach.SNACH_SYSTEM_ACCESS" />
+
+    <!--<permission android:name="assembtec.com.snach_screen_access" android:label="snach_screen_access" android:protectionLevel="normal"/>-->
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher" android:theme="@style/Theme.AppCompat.Light">
+
+        <activity
+            android:name=".BluetoothActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CustomDrawerActivities" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GesturesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CustomDrawerActivities" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AppsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CustomDrawerActivities" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DeviceProfilesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CustomDrawerActivities" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".OnBootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".OnBluetoothReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".GestureReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="assembtec.com.snach.ACTION_HOMESCREEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ServiceRequestsBroadcast"
+            android:enabled="true"
+            android:process=":SnachConnectionProcess">
+            <intent-filter>
+                <action android:name="assembtec.com.snach.ACTION_SERVICE_REQUEST" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".OnAppReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="assembtec.com.snach.ACTION_SNACH_SCREEN_SETUP" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".StandardSnachApps.OnQueryAppsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="assembtec.com.snach.ACTION_SUPPORTED_APPS_QUERY" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".StandardSnachApps.OnStndStopwatchReceiver"
+            android:enabled="true"
+            android:process=":SnachStandardStopwatch">
+            <intent-filter>
+                <action android:name="com.assembtec.snach.STND_STOPWATCH" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".SnachStreamService"
+            android:enabled="true"
+            android:process=":SnachConnectionProcess">
+            <intent-filter>
+                <action android:name="com.assembtec.snach.SnachStreamService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".NotificationsService"
+            android:enabled="true"
+            android:process=":SnachConnectionProcess"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".StandardSnachApps.StandardAppStopwatch"
+            android:enabled="true"
+            android:process=":SnachStandardStopwatch">
+            <intent-filter>
+                <action android:name="com.assembtec.snach.StandardSnachApps.StandardAppStopwatch" />
+            </intent-filter>
+
+        </service>
+
+    </application>
+
+</manifest>

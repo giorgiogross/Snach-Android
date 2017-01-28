@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Snach</string>
+
+    <string name="drawer_open">Snach</string>
+    <string name="bluetooth_title">Bluetooth</string>
+    <string name="gesture_title">Gestures</string>
+    <string name="add_gesture_title">Add gesture</string>
+    <string name="edit_gesture_title">Edit gesture</string>
+    <string name="new_device_title">New Device..</string>
+
+    <string name="set_gesture_startpoint">Please move your wrist with your Snach to the starting position from which you would like to make the gesture.</string>
+    <string name="name_gesture">Gesture Name</string>
+    <string name="mode_gesture">Gesture Mode</string>
+    <string-array name="gesture_modes">
+        <item>Always</item>
+        <item>Screen On</item>
+        </string-array>
+    <string name="edit_gestureaction">EDIT ACTION</string>
+    <string name="repeat_record">REPEAT RECORD</string>
+    <string name="save_edited_gestrue">SAVE</string>
+    <string name="delete_gestrue">DELETE</string>
+    <string name="name_gestureaction">Action:</string>
+    <string name="gesture_subheader_standard">Standard gestures</string>
+    <string name="gesture_subheader_system">System gestures</string>
+    <string name="gesture_subheader_shortcuts">Shortcuts</string>
+    <string name="gesture_subheader_appgestures">App gestures</string>
+    <string name="gesture_standard_swypeleft">Swype left</string>
+    <string name="gesture_standard_swyperight">Swype right </string>
+    <string name="gesture_standard_dismiss">Dismiss</string>
+    <string name="gesture_standard_confirm">Confirm</string>
+    <string name="gesture_action_homescreen">Go to home screen</string>
+    <string name="gesture_action_playmusic">Play music</string>
+    <string name="gesture_action_description">This gesture will:</string>
+    <string name="do_gesture">Now you can execute the gesture.</string>
+    <string name="record_gesture">RECORD</string>
+
+    <string name="apps_title">Snach Apps</string>
+    <string name="tab_apps_supported_title">Supported Apps</string>
+    <string name="tab_apps_active_title">Active Apps</string>
+    <string name="no_supported_apps">No apps where found which support your Snach</string>
+
+    <string name="devices_title">Device Profiles</string>
+    <string name="current_profile_title">Current profile:</string>
+    <string name="add_device_title">Add Profile</string>
+    <string name="add_device_name">Name:</string>
+
+    <string name="wearable_title">Snach</string>
+
+    <string name="connecting_snach">Connecting with Snach..</string>
+    <string name="connection_status_good">You are connected to your Snach</string>
+
+    <string name="service_started">Snach Background-Services are running</string>
+
+    <string name="error_no_bluetooth_support">Your device does not support Bluetooth</string>
+    <string name="error_bluetooth_socket">Failed connecting with device</string>
+    <string name="error_looper">Something went wrong.\nIs your Snach connected?</string>
+
+    <!-- Standard App String Resources: -->
+    <string name="stnd_stopwatch_apptitle">Stopwatch</string>
+    <string name="stnd_stopwatch_description">This app will allow you to use a simple stopwatch</string>
+</resources>

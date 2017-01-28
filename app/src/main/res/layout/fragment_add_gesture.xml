@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_addGestur"
+        android:layout_height="56dp"
+        android:layout_width="match_parent"
+        android:background="@color/main500"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/titlewhite"
+        android:gravity="center"
+        android:text="@string/add_gesture_title"
+        android:layout_marginLeft="56dp"
+        android:id="@+id/tv_addGestureTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/rl_recording_specs" />
+
+    <ImageButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/ib_cancel"
+        android:background="@drawable/button_selector"
+        android:src="@drawable/ic_action_cancel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/rl_record"
+        android:layout_below="@+id/tb_addGestur"
+        android:visibility="invisible"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_gesture"
+            android:textColor="@color/highlight"
+            android:background="@drawable/button_framed"
+            android:padding="4dp"
+            android:id="@+id/b_startRecordingGesture"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/title"
+            android:text="@string/set_gesture_startpoint"
+            android:id="@+id/tv_gestureRecordingDescription"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/b_startRecordingGesture" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/titlealpha"
+            android:text="1"
+            android:layout_marginBottom="56dp"
+            android:id="@+id/tv_attemptsCounter"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/titlealpha"
+            android:text="/5"
+            android:id="@+id/tv_totalAttepmts"
+            android:layout_alignBottom="@+id/tv_attemptsCounter"
+            android:layout_toRightOf="@+id/tv_attemptsCounter"
+            android:layout_toEndOf="@+id/tv_attemptsCounter" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/rl_recording_specs"
+        android:layout_below="@+id/tb_addGestur"
+        android:background="@color/purewhite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:text="@string/name_gesture"
+            android:id="@+id/tv_gestureName"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="32dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_gestureName"
+            android:gravity="right"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/tv_gestureName"
+            android:layout_toEndOf="@+id/tv_gestureName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:text="@string/mode_gesture"
+            android:id="@+id/tv_gestureMode"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/tv_gestureName"
+            android:layout_alignLeft="@+id/tv_gestureName"
+            android:layout_alignStart="@+id/tv_gestureName" />
+
+        <Spinner
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/s_gestureMode"
+            android:layout_marginRight="16dp"
+            android:layout_alignTop="@+id/tv_gestureMode"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:text="@string/name_gestureaction"
+            android:id="@+id/tv_gestureAction"
+            android:layout_below="@+id/tv_gestureMode"
+            android:layout_alignLeft="@+id/tv_gestureName"
+            android:layout_alignStart="@+id/tv_gestureName"
+            android:layout_marginTop="32dp" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv_gestureAction"
+            android:background="@color/highlight_bright"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/tv_gestureAction"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="invisible"
+            android:id="@+id/rl_gestureActionSpecification"
+            android:background="@color/abc_search_url_text_normal"
+            android:layout_alignTop="@+id/lv_gestureAction"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/titlewhite"
+                android:text="@string/gesture_action_description"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:id="@+id/tv_gestureActionDescription"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/ib_backToActionList"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_action_back"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ib_continueWithRecording"
+            android:background="@drawable/fab_selector_flat"
+            android:layout_margin="16dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_action_forward"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

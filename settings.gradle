@@ -1,0 +1,1 @@
+include ':app', ':snach_core_lib'

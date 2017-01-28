@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_editGesture"
+        android:layout_height="56dp"
+        android:layout_width="match_parent"
+        android:background="@color/main500"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/titlewhite"
+        android:gravity="center"
+        android:text="@string/edit_gesture_title"
+        android:layout_marginLeft="56dp"
+        android:id="@+id/tv_editGesturesTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/rl_recording_specs" />
+
+    <ImageButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/ib_back"
+        android:background="@drawable/button_selector"
+        android:src="@drawable/ic_action_back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/rl_recording_specs"
+        android:layout_below="@+id/tb_editGesture"
+        android:background="@color/purewhite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/title"
+            android:text="@string/name_gesture"
+            android:id="@+id/tv_gestureName"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="32dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_editName"
+            android:gravity="right"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/tv_gestureName"
+            android:layout_toEndOf="@+id/tv_gestureName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/title"
+            android:text="@string/mode_gesture"
+            android:id="@+id/tv_gestureMode"
+            android:layout_marginTop="54dp"
+            android:layout_below="@+id/tv_gestureName"
+            android:layout_alignLeft="@+id/tv_gestureName"
+            android:layout_alignStart="@+id/tv_gestureName" />
+
+        <Spinner
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/s_gestureMode"
+            android:layout_marginRight="16dp"
+            android:layout_alignTop="@+id/tv_gestureMode"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/title"
+            android:text="Gesture action"
+            android:layout_marginRight="16dp"
+            android:id="@+id/tv_gestureAction"
+            android:layout_below="@+id/tv_gestureMode"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="54dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/title"
+            android:text="@string/name_gestureaction"
+            android:id="@+id/tv_gestureActionTitle"
+            android:layout_below="@+id/tv_gestureMode"
+            android:layout_alignLeft="@+id/tv_gestureName"
+            android:layout_alignStart="@+id/tv_gestureName"
+            android:layout_marginTop="54dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:text="@string/edit_gestureaction"
+            android:background="@drawable/button_framed"
+            android:textColor="@color/main_dark"
+            android:id="@+id/tv_editGestureAction"
+            android:layout_marginTop="28sp"
+            android:layout_below="@+id/tv_gestureAction"
+            android:layout_alignRight="@id/tv_gestureAction"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:text="@string/repeat_record"
+            android:background="@drawable/button_framed"
+            android:textColor="@color/main_dark"
+            android:id="@+id/tv_repeatRecord"
+            android:layout_marginTop="28sp"
+            android:layout_below="@+id/tv_gestureActionTitle"
+            android:layout_alignLeft="@id/tv_gestureActionTitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:text="@string/delete_gestrue"
+            android:background="@color/transparent"
+            android:textColor="@color/titlealpha"
+            android:id="@+id/tv_deleteGesture"
+            android:layout_toLeftOf="@+id/tv_saveGestureEdits"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:text="@string/save_edited_gestrue"
+            android:background="@drawable/button_filled"
+            android:textColor="@color/purewhite"
+            android:id="@+id/tv_saveGestureEdits"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv_gestureAction"
+            android:visibility="invisible"
+            android:background="@color/highlight_bright"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/tv_gestureAction"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
